@@ -71,45 +71,13 @@
   <!-- Inline critical CSS -->
   <style>
     :root{
-      --c1:#70c3ff;--c2:#fd6a7f;--c3:#7f8ea0;--c4:#89d04f;
-      --c5:#998899;--c6:#888069;
+      --c1-light:#b8e1ff;--c1-dark:#70c3ff;
+      --c2-light:#fec7ce;--c2-dark:#fd6a7f;
+      --c3-light:#c7ced6;--c3-dark:#7f8ea0;
+      --c4-light:#c4e89f;--c4-dark:#89d04f;
+      --c5-light:#d1c9d1;--c5-dark:#998899;
+      --c6-light:#c4c0b4;--c6-dark:#888069;
       --text-dark:#00314a;
-      --temu-orange:#ffd6b2; /* Faded primary color */
-      --max-blue:#005AA3;
-      --youtube-red:#ff0000;
-      --chrome-green:#34a853;
-      --amazon-orange:#ff9900;
-      --threads-blue:#000000;
-      --google-maps-blue:#4285f4;
-      --chatgpt-green:#10a37f;
-      --instagram-gradient:linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
-      --facebook-blue:#1877f2;
-      --capcut-blue:#00c8ff;
-      --tiktok-black:#000000;
-      --google-red:#ea4335;
-      --whatsapp-green:#25d366;
-      --disney-blue:#0056b3;
-      --telegram-blue:#0088cc;
-      --google-one-blue:#1a73e8;
-      --snapchat-yellow:#fffc00;
-      --indeed-green:#003087;
-      --zillow-orange:#0054a6;
-      --pinterest-red:#e60023;
-      --google-drive-green:#128853;
-      --apple-tv-black:#000000;
-      --spotify-green:#1db954;
-      --apple-music-red:#fc3c44;
-      --doordash-red:#e60023;
-      --outlook-blue:#0078d4;
-      --word-blue:#2b579a;
-      --excel-green:#217346;
-      --powerpoint-orange:#d24726;
-      --onenote-purple:#7719aa;
-      --teams-purple:#6264a7;
-      --onedrive-blue:#0078d4;
-      --edge-blue:#0078d4;
-      --todo-blue:#107c10;
-      --authenticator-blue:#0078d4;
     }
     *{box-sizing:border-box;margin:0;padding:0}
     body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#fafafa;color:#222;line-height:1.5}
@@ -120,7 +88,7 @@
     .hero{
       text-align:center;
       padding:3rem 1rem 2rem;
-      background:linear-gradient(135deg,var(--c1),var(--c4));
+      background:linear-gradient(135deg,var(--c1-dark),var(--c4-dark));
       color:#fff;
     }
     .hero h1{font-size:clamp(1.8rem,5vw,2.5rem);margin-bottom:.5rem}
@@ -136,61 +104,29 @@
     }
     .mk-color-item{
       position:relative;
-      background:var(--bg, var(--c1));
+      background:var(--bg, var(--c1-light));
       border-radius:8px;
       padding:2rem 1.5rem;
       text-align:center;
-      color:#fff;
+      color:#333;
       transition:transform .3s ease,box-shadow .3s ease;
     }
     .mk-color-item:hover{transform:translateY(-6px);box-shadow:0 26px 40px -24px rgba(0,36,100,.5)}
-    .mk-color-item.color1{--bg:var(--c1)}
-    .mk-color-item.color2{--bg:var(--c2)}
-    .mk-color-item.color3{--bg:var(--c3)}
-    .mk-color-item.color4{--bg:var(--c4)}
-    .mk-color-item.color5{--bg:var(--c5)}
-    .mk-color-item.color6{--bg:var(--c6)}
-    .mk-color-item.temu{--bg:var(--temu-orange); color: #333;}
-    .mk-color-item.temu h3{color: #333;}
-    .mk-color-item.temu p{color: #333; opacity: 0.9;}
-    .mk-color-item.max{--bg:var(--max-blue)}
-    .mk-color-item.youtube{--bg:var(--youtube-red)}
-    .mk-color-item.chrome{--bg:var(--chrome-green)}
-    .mk-color-item.amazon{--bg:var(--amazon-orange)}
-    .mk-color-item.threads{--bg:var(--threads-blue)}
-    .mk-color-item.google-maps{--bg:var(--google-maps-blue)}
-    .mk-color-item.chatgpt{--bg:var(--chatgpt-green)}
-    .mk-color-item.instagram{--bg:var(--instagram-gradient)}
-    .mk-color-item.facebook{--bg:var(--facebook-blue)}
-    .mk-color-item.capcut{--bg:var(--capcut-blue)}
-    .mk-color-item.tiktok{--bg:var(--tiktok-black)}
-    .mk-color-item.google{--bg:var(--google-red)}
-    .mk-color-item.whatsapp{--bg:var(--whatsapp-green)}
-    .mk-color-item.disney{--bg:var(--disney-blue)}
-    .mk-color-item.telegram{--bg:var(--telegram-blue)}
-    .mk-color-item.google-one{--bg:var(--google-one-blue)}
-    .mk-color-item.snapchat{--bg:var(--snapchat-yellow)}
-    .mk-color-item.indeed{--bg:var(--indeed-green)}
-    .mk-color-item.zillow{--bg:var(--zillow-orange)}
-    .mk-color-item.pinterest{--bg:var(--pinterest-red)}
-    .mk-color-item.google-drive{--bg:var(--google-drive-green)}
-    .mk-color-item.apple-tv{--bg:var(--apple-tv-black)}
-    .mk-color-item.spotify{--bg:var(--spotify-green)}
-    .mk-color-item.apple-music{--bg:var(--apple-music-red)}
-    .mk-color-item.doordash{--bg:var(--doordash-red)}
-    .mk-color-item.outlook{--bg:var(--outlook-blue)}
-    .mk-color-item.word{--bg:var(--word-blue)}
-    .mk-color-item.excel{--bg:var(--excel-green)}
-    .mk-color-item.powerpoint{--bg:var(--powerpoint-orange)}
-    .mk-color-item.onenote{--bg:var(--onenote-purple)}
-    .mk-color-item.teams{--bg:var(--teams-purple)}
-    .mk-color-item.onedrive{--bg:var(--onedrive-blue)}
-    .mk-color-item.edge{--bg:var(--edge-blue)}
-    .mk-color-item.todo{--bg:var(--todo-blue)}
-    .mk-color-item.authenticator{--bg:var(--authenticator-blue)}
+    .mk-color-item.color1{--bg:var(--c1-light)}
+    .mk-color-item.color1:hover{--bg:var(--c1-dark)}
+    .mk-color-item.color2{--bg:var(--c2-light)}
+    .mk-color-item.color2:hover{--bg:var(--c2-dark)}
+    .mk-color-item.color3{--bg:var(--c3-light)}
+    .mk-color-item.color3:hover{--bg:var(--c3-dark)}
+    .mk-color-item.color4{--bg:var(--c4-light)}
+    .mk-color-item.color4:hover{--bg:var(--c4-dark)}
+    .mk-color-item.color5{--bg:var(--c5-light)}
+    .mk-color-item.color5:hover{--bg:var(--c5-dark)}
+    .mk-color-item.color6{--bg:var(--c6-light)}
+    .mk-color-item.color6:hover{--bg:var(--c6-dark)}
     .mk-color-item img{height:60px;margin:0 auto .75rem;border-radius:12px}
-    .mk-color-item h3{font-size:1.25rem;margin-bottom:.25rem;color:var(--text-dark)}
-    .mk-color-item p{font-size:.875rem;opacity:.9}
+    .mk-color-item h3{font-size:1.25rem;margin-bottom:.25rem;color:#333}
+    .mk-color-item p{font-size:.875rem;color:#333;opacity:.8}
 
     #topBtn{
       position:fixed;bottom:1.5rem;right:-60px;width:40px;height:40px;
@@ -213,291 +149,291 @@
   <main>
     <ul class="app-grid">
       <!-- 1 -->
-      <li class="mk-color-item temu">
-        <a href="https://apps.apple.com/us/app/temu-shop-like-a-billionaire/id1632153553" target="_blank" rel="noopener noreferrer" aria-label="Temu – Shop like a billionaire">
-          <img src="https://mainrico.xyz/apps.png" alt="Temu app icon" width="80" height="80" loading="lazy">
-          <h3>Temu</h3>
-          <p>Shop like a billionaire</p>
+      <li class="mk-color-item color1">
+        <a href="https://apps.apple.com/us/app/x-clash-dare/id6744812012" target="_blank" rel="noopener noreferrer" aria-label="X-Clash: Dare – strategic clash game">
+          <img src="https://mainrico.xyz/apps.png" alt="X-Clash: Dare app icon" width="80" height="80" loading="lazy">
+          <h3>X-Clash: Dare</h3>
+          <p>strategic clash game</p>
         </a>
       </li>
       <!-- 2 -->
-      <li class="mk-color-item max">
-        <a href="https://apps.apple.com/us/app/max-stream-hbo-tv-movies/id667287308" target="_blank" rel="noopener noreferrer" aria-label="Max – Stream the best of HBO, Max Originals, and more">
-          <img src="https://mainrico.xyz/apps.png" alt="Max app icon" width="80" height="80" loading="lazy">
-          <h3>Max</h3>
-          <p>Stream the best of HBO, Max Originals, and more</p>
+      <li class="mk-color-item color2">
+        <a href="https://apps.apple.com/us/app/clash-royale/id1053012308" target="_blank" rel="noopener noreferrer" aria-label="Clash Royale – real-time multiplayer battles">
+          <img src="https://mainrico.xyz/apps.png" alt="Clash Royale app icon" width="80" height="80" loading="lazy">
+          <h3>Clash Royale</h3>
+          <p>real-time multiplayer battles</p>
         </a>
       </li>
       <!-- 3 -->
-      <li class="mk-color-item youtube">
-        <a href="https://apps.apple.com/us/app/youtube-watch-listen-stream/id544007664" target="_blank" rel="noopener noreferrer" aria-label="YouTube – Watch and create videos">
-          <img src="https://mainrico.xyz/apps.png" alt="YouTube app icon" width="80" height="80" loading="lazy">
-          <h3>YouTube</h3>
-          <p>Watch and create videos</p>
+      <li class="mk-color-item color3">
+        <a href="https://apps.apple.com/us/app/duet-night-abyss/id6744096826" target="_blank" rel="noopener noreferrer" aria-label="Duet Night: Abyss – adventure game">
+          <img src="https://mainrico.xyz/apps.png" alt="Duet Night: Abyss app icon" width="80" height="80" loading="lazy">
+          <h3>Duet Night: Abyss</h3>
+          <p>adventure game</p>
         </a>
       </li>
       <!-- 4 -->
-      <li class="mk-color-item chrome">
-        <a href="https://apps.apple.com/us/app/google-chrome/id535886823" target="_blank" rel="noopener noreferrer" aria-label="Google Chrome – Fast, simple, and secure">
-          <img src="https://mainrico.xyz/apps.png" alt="Google Chrome app icon" width="80" height="80" loading="lazy">
-          <h3>Google Chrome</h3>
-          <p>Fast, simple, and secure</p>
+      <li class="mk-color-item color4">
+        <a href="https://apps.apple.com/us/app/jigsolitaire/id6741408932" target="_blank" rel="noopener noreferrer" aria-label="JigSolitaire – puzzle solitaire">
+          <img src="https://mainrico.xyz/apps.png" alt="JigSolitaire app icon" width="80" height="80" loading="lazy">
+          <h3>JigSolitaire</h3>
+          <p>puzzle solitaire</p>
         </a>
       </li>
       <!-- 5 -->
-      <li class="mk-color-item amazon">
-        <a href="https://apps.apple.com/us/app/amazon-shopping/id297606951" target="_blank" rel="noopener noreferrer" aria-label="Amazon Shopping – Shop millions of products">
-          <img src="https://mainrico.xyz/apps.png" alt="Amazon Shopping app icon" width="80" height="80" loading="lazy">
-          <h3>Amazon Shopping</h3>
-          <p>Shop millions of products</p>
+      <li class="mk-color-item color5">
+        <a href="https://apps.apple.com/us/app/block-blast/id1617391485" target="_blank" rel="noopener noreferrer" aria-label="Block Blast – block puzzle game">
+          <img src="https://mainrico.xyz/apps.png" alt="Block Blast app icon" width="80" height="80" loading="lazy">
+          <h3>Block Blast</h3>
+          <p>block puzzle game</p>
         </a>
       </li>
       <!-- 6 -->
-      <li class="mk-color-item threads">
-        <a href="https://apps.apple.com/us/app/threads-an-instagram-app/id6446901002" target="_blank" rel="noopener noreferrer" aria-label="Threads – A place to share what's on your mind">
-          <img src="https://mainrico.xyz/apps.png" alt="Threads app icon" width="80" height="80" loading="lazy">
-          <h3>Threads</h3>
-          <p>A place to share what's on your mind</p>
+      <li class="mk-color-item color6">
+        <a href="https://apps.apple.com/us/app/roblox/id431946152" target="_blank" rel="noopener noreferrer" aria-label="Roblox – create and play games">
+          <img src="https://mainrico.xyz/apps.png" alt="Roblox app icon" width="80" height="80" loading="lazy">
+          <h3>Roblox</h3>
+          <p>create and play games</p>
         </a>
       </li>
       <!-- 7 -->
-      <li class="mk-color-item google-maps">
-        <a href="https://apps.apple.com/us/app/google-maps/id585027354" target="_blank" rel="noopener noreferrer" aria-label="Google Maps – Maps and navigation">
-          <img src="https://mainrico.xyz/apps.png" alt="Google Maps app icon" width="80" height="80" loading="lazy">
-          <h3>Google Maps</h3>
-          <p>Maps and navigation</p>
+      <li class="mk-color-item color1">
+        <a href="https://apps.apple.com/us/app/disney-solitaire/id6475757306" target="_blank" rel="noopener noreferrer" aria-label="Disney Solitaire – Disney themed card game">
+          <img src="https://mainrico.xyz/apps.png" alt="Disney Solitaire app icon" width="80" height="80" loading="lazy">
+          <h3>Disney Solitaire</h3>
+          <p>Disney themed card game</p>
         </a>
       </li>
       <!-- 8 -->
-      <li class="mk-color-item chatgpt">
-        <a href="https://apps.apple.com/us/app/chatgpt/id6448311069" target="_blank" rel="noopener noreferrer" aria-label="ChatGPT – Chat with AI">
-          <img src="https://mainrico.xyz/apps.png" alt="ChatGPT app icon" width="80" height="80" loading="lazy">
-          <h3>ChatGPT</h3>
-          <p>Chat with AI</p>
+      <li class="mk-color-item color2">
+        <a href="https://apps.apple.com/us/app/solitaire-associations-words/id6748950306" target="_blank" rel="noopener noreferrer" aria-label="Solitaire Associations Words – word association solitaire">
+          <img src="https://mainrico.xyz/apps.png" alt="Solitaire Associations Words app icon" width="80" height="80" loading="lazy">
+          <h3>Solitaire Associations Words</h3>
+          <p>word association solitaire</p>
         </a>
       </li>
       <!-- 9 -->
-      <li class="mk-color-item instagram">
-        <a href="https://apps.apple.com/us/app/instagram/id389801252" target="_blank" rel="noopener noreferrer" aria-label="Instagram – Create & share photos">
-          <img src="https://mainrico.xyz/apps.png" alt="Instagram app icon" width="80" height="80" loading="lazy">
-          <h3>Instagram</h3>
-          <p>Create & share photos</p>
+      <li class="mk-color-item color3">
+        <a href="https://apps.apple.com/us/app/township/id638689075" target="_blank" rel="noopener noreferrer" aria-label="Township – city building game">
+          <img src="https://mainrico.xyz/apps.png" alt="Township app icon" width="80" height="80" loading="lazy">
+          <h3>Township</h3>
+          <p>city building game</p>
         </a>
       </li>
       <!-- 10 -->
-      <li class="mk-color-item facebook">
-        <a href="https://apps.apple.com/us/app/facebook/id284882215" target="_blank" rel="noopener noreferrer" aria-label="Facebook – Connect with friends and family">
-          <img src="https://mainrico.xyz/apps.png" alt="Facebook app icon" width="80" height="80" loading="lazy">
-          <h3>Facebook</h3>
-          <p>Connect with friends and family</p>
+      <li class="mk-color-item color4">
+        <a href="https://apps.apple.com/us/app/magic-sort/id6499209744" target="_blank" rel="noopener noreferrer" aria-label="Magic Sort – sorting puzzle">
+          <img src="https://mainrico.xyz/apps.png" alt="Magic Sort app icon" width="80" height="80" loading="lazy">
+          <h3>Magic Sort</h3>
+          <p>sorting puzzle</p>
         </a>
       </li>
       <!-- 11 -->
-      <li class="mk-color-item capcut">
-        <a href="https://apps.apple.com/us/app/capcut-video-editor/id1500855883" target="_blank" rel="noopener noreferrer" aria-label="CapCut – Edit videos like a pro">
-          <img src="https://mainrico.xyz/apps.png" alt="CapCut app icon" width="80" height="80" loading="lazy">
-          <h3>CapCut</h3>
-          <p>Edit videos like a pro</p>
+      <li class="mk-color-item color5">
+        <a href="https://apps.apple.com/us/app/fortnite/id6483539426" target="_blank" rel="noopener noreferrer" aria-label="Fortnite – battle royale game">
+          <img src="https://mainrico.xyz/apps.png" alt="Fortnite app icon" width="80" height="80" loading="lazy">
+          <h3>Fortnite</h3>
+          <p>battle royale game</p>
         </a>
       </li>
       <!-- 12 -->
-      <li class="mk-color-item tiktok">
-        <a href="https://apps.apple.com/us/app/tiktok/id835599320" target="_blank" rel="noopener noreferrer" aria-label="TikTok – Create and share videos">
-          <img src="https://mainrico.xyz/apps.png" alt="TikTok app icon" width="80" height="80" loading="lazy">
-          <h3>TikTok</h3>
-          <p>Create and share videos</p>
+      <li class="mk-color-item color6">
+        <a href="https://apps.apple.com/us/app/imposter-party-word-game/id6745120053" target="_blank" rel="noopener noreferrer" aria-label="Imposter Party: Word Game – word guessing party">
+          <img src="https://mainrico.xyz/apps.png" alt="Imposter Party: Word Game app icon" width="80" height="80" loading="lazy">
+          <h3>Imposter Party: Word Game</h3>
+          <p>word guessing party</p>
         </a>
       </li>
       <!-- 13 -->
-      <li class="mk-color-item google">
-        <a href="https://apps.apple.com/us/app/google/id284815942" target="_blank" rel="noopener noreferrer" aria-label="Google – Search made just for mobile">
-          <img src="https://mainrico.xyz/apps.png" alt="Google app icon" width="80" height="80" loading="lazy">
-          <h3>Google</h3>
-          <p>Search made just for mobile</p>
+      <li class="mk-color-item color1">
+        <a href="https://apps.apple.com/us/app/hexa-sort/id6463127238" target="_blank" rel="noopener noreferrer" aria-label="Hexa Sort – hexagon sorting puzzle">
+          <img src="https://mainrico.xyz/apps.png" alt="Hexa Sort app icon" width="80" height="80" loading="lazy">
+          <h3>Hexa Sort</h3>
+          <p>hexagon sorting puzzle</p>
         </a>
       </li>
       <!-- 14 -->
-      <li class="mk-color-item whatsapp">
-        <a href="https://apps.apple.com/us/app/whatsapp-messenger/id310633997" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Messenger – Simple. Secure. Reliable messaging">
-          <img src="https://mainrico.xyz/apps.png" alt="WhatsApp Messenger app icon" width="80" height="80" loading="lazy">
-          <h3>WhatsApp Messenger</h3>
-          <p>Simple. Secure. Reliable messaging</p>
+      <li class="mk-color-item color2">
+        <a href="https://apps.apple.com/us/app/vita-mahjong/id6468921495" target="_blank" rel="noopener noreferrer" aria-label="Vita Mahjong – mahjong tile matching">
+          <img src="https://mainrico.xyz/apps.png" alt="Vita Mahjong app icon" width="80" height="80" loading="lazy">
+          <h3>Vita Mahjong</h3>
+          <p>mahjong tile matching</p>
         </a>
       </li>
       <!-- 15 -->
-      <li class="mk-color-item disney">
-        <a href="https://apps.apple.com/us/app/disney/id1388180001" target="_blank" rel="noopener noreferrer" aria-label="Disney+ – Stream the best in entertainment">
-          <img src="https://mainrico.xyz/apps.png" alt="Disney+ app icon" width="80" height="80" loading="lazy">
-          <h3>Disney+</h3>
-          <p>Stream the best in entertainment</p>
+      <li class="mk-color-item color3">
+        <a href="https://apps.apple.com/us/app/royal-kingdom/id1606549505" target="_blank" rel="noopener noreferrer" aria-label="Royal Kingdom – match-3 adventure">
+          <img src="https://mainrico.xyz/apps.png" alt="Royal Kingdom app icon" width="80" height="80" loading="lazy">
+          <h3>Royal Kingdom</h3>
+          <p>match-3 adventure</p>
         </a>
       </li>
       <!-- 16 -->
-      <li class="mk-color-item telegram">
-        <a href="https://apps.apple.com/us/app/telegram-messenger/id686449807" target="_blank" rel="noopener noreferrer" aria-label="Telegram Messenger – Fast, secure, and synced across all your devices">
-          <img src="https://mainrico.xyz/apps.png" alt="Telegram Messenger app icon" width="80" height="80" loading="lazy">
-          <h3>Telegram Messenger</h3>
-          <p>Fast, secure, and synced across all your devices</p>
+      <li class="mk-color-item color4">
+        <a href="https://apps.apple.com/us/app/magic-tiles-3-piano-game/id1443446174" target="_blank" rel="noopener noreferrer" aria-label="Magic Tiles 3: Piano Game – rhythm piano game">
+          <img src="https://mainrico.xyz/apps.png" alt="Magic Tiles 3: Piano Game app icon" width="80" height="80" loading="lazy">
+          <h3>Magic Tiles 3: Piano Game</h3>
+          <p>rhythm piano game</p>
         </a>
       </li>
       <!-- 17 -->
-      <li class="mk-color-item google-one">
-        <a href="https://apps.apple.com/us/app/google-one/id1223097114" target="_blank" rel="noopener noreferrer" aria-label="Google One – Your photos, videos, and files">
-          <img src="https://mainrico.xyz/apps.png" alt="Google One app icon" width="80" height="80" loading="lazy">
-          <h3>Google One</h3>
-          <p>Your photos, videos, and files</p>
+      <li class="mk-color-item color5">
+        <a href="https://apps.apple.com/us/app/word-search-explorer/id1602508478" target="_blank" rel="noopener noreferrer" aria-label="Word Search Explorer – word search puzzles">
+          <img src="https://mainrico.xyz/apps.png" alt="Word Search Explorer app icon" width="80" height="80" loading="lazy">
+          <h3>Word Search Explorer</h3>
+          <p>word search puzzles</p>
         </a>
       </li>
       <!-- 18 -->
-      <li class="mk-color-item snapchat">
-        <a href="https://apps.apple.com/us/app/snapchat/id447188370" target="_blank" rel="noopener noreferrer" aria-label="Snapchat – Share the moment">
-          <img src="https://mainrico.xyz/apps.png" alt="Snapchat app icon" width="80" height="80" loading="lazy">
-          <h3>Snapchat</h3>
-          <p>Share the moment</p>
+      <li class="mk-color-item color6">
+        <a href="https://apps.apple.com/us/app/monopoly-go/id1621328561" target="_blank" rel="noopener noreferrer" aria-label="MONOPOLY GO! – modern monopoly game">
+          <img src="https://mainrico.xyz/apps.png" alt="MONOPOLY GO! app icon" width="80" height="80" loading="lazy">
+          <h3>MONOPOLY GO!</h3>
+          <p>modern monopoly game</p>
         </a>
       </li>
       <!-- 19 -->
-      <li class="mk-color-item indeed">
-        <a href="https://apps.apple.com/us/app/indeed-job-search/id309735670" target="_blank" rel="noopener noreferrer" aria-label="Indeed Job Search – Find jobs hiring now">
-          <img src="https://mainrico.xyz/apps.png" alt="Indeed Job Search app icon" width="80" height="80" loading="lazy">
-          <h3>Indeed Job Search</h3>
-          <p>Find jobs hiring now</p>
+      <li class="mk-color-item color1">
+        <a href="https://apps.apple.com/us/app/whiteout-survival/id6443575749" target="_blank" rel="noopener noreferrer" aria-label="Whiteout Survival – survival strategy game">
+          <img src="https://mainrico.xyz/apps.png" alt="Whiteout Survival app icon" width="80" height="80" loading="lazy">
+          <h3>Whiteout Survival</h3>
+          <p>survival strategy game</p>
         </a>
       </li>
       <!-- 20 -->
-      <li class="mk-color-item zillow">
-        <a href="https://apps.apple.com/us/app/zillow-find-houses-for-sale/id284911942" target="_blank" rel="noopener noreferrer" aria-label="Zillow – Find your forever home">
-          <img src="https://mainrico.xyz/apps.png" alt="Zillow app icon" width="80" height="80" loading="lazy">
-          <h3>Zillow</h3>
-          <p>Find your forever home</p>
+      <li class="mk-color-item color2">
+        <a href="https://apps.apple.com/us/app/drop-the-cat/id6749132002" target="_blank" rel="noopener noreferrer" aria-label="Drop the Cat – physics puzzle">
+          <img src="https://mainrico.xyz/apps.png" alt="Drop the Cat app icon" width="80" height="80" loading="lazy">
+          <h3>Drop the Cat</h3>
+          <p>physics puzzle</p>
         </a>
       </li>
       <!-- 21 -->
-      <li class="mk-color-item pinterest">
-        <a href="https://apps.apple.com/us/app/pinterest/id429047995" target="_blank" rel="noopener noreferrer" aria-label="Pinterest – Find new ideas to try">
-          <img src="https://mainrico.xyz/apps.png" alt="Pinterest app icon" width="80" height="80" loading="lazy">
-          <h3>Pinterest</h3>
-          <p>Find new ideas to try</p>
+      <li class="mk-color-item color3">
+        <a href="https://apps.apple.com/us/app/subway-surfers/id512939461" target="_blank" rel="noopener noreferrer" aria-label="Subway Surfers – endless runner game">
+          <img src="https://mainrico.xyz/apps.png" alt="Subway Surfers app icon" width="80" height="80" loading="lazy">
+          <h3>Subway Surfers</h3>
+          <p>endless runner game</p>
         </a>
       </li>
       <!-- 22 -->
-      <li class="mk-color-item google-drive">
-        <a href="https://apps.apple.com/us/app/google-drive/id507874739" target="_blank" rel="noopener noreferrer" aria-label="Google Drive – Store, share, and access your files">
-          <img src="https://mainrico.xyz/apps.png" alt="Google Drive app icon" width="80" height="80" loading="lazy">
-          <h3>Google Drive</h3>
-          <p>Store, share, and access your files</p>
+      <li class="mk-color-item color4">
+        <a href="https://apps.apple.com/us/app/among-us/id1351168404" target="_blank" rel="noopener noreferrer" aria-label="Among Us – multiplayer deduction game">
+          <img src="https://mainrico.xyz/apps.png" alt="Among Us app icon" width="80" height="80" loading="lazy">
+          <h3>Among Us</h3>
+          <p>multiplayer deduction game</p>
         </a>
       </li>
       <!-- 23 -->
-      <li class="mk-color-item apple-tv">
-        <a href="https://apps.apple.com/us/app/apple-tv/id1228982414" target="_blank" rel="noopener noreferrer" aria-label="Apple TV – Watch movies and shows">
-          <img src="https://mainrico.xyz/apps.png" alt="Apple TV app icon" width="80" height="80" loading="lazy">
-          <h3>Apple TV</h3>
-          <p>Watch movies and shows</p>
+      <li class="mk-color-item color5">
+        <a href="https://apps.apple.com/us/app/geometry-dash-lite/id698255242" target="_blank" rel="noopener noreferrer" aria-label="Geometry Dash Lite – rhythm platformer">
+          <img src="https://mainrico.xyz/apps.png" alt="Geometry Dash Lite app icon" width="80" height="80" loading="lazy">
+          <h3>Geometry Dash Lite</h3>
+          <p>rhythm platformer</p>
         </a>
       </li>
       <!-- 24 -->
-      <li class="mk-color-item spotify">
-        <a href="https://apps.apple.com/us/app/spotify-music-and-podcasts/id324684580" target="_blank" rel="noopener noreferrer" aria-label="Spotify – Music and podcasts, free">
-          <img src="https://mainrico.xyz/apps.png" alt="Spotify app icon" width="80" height="80" loading="lazy">
-          <h3>Spotify</h3>
-          <p>Music and podcasts, free</p>
+      <li class="mk-color-item color6">
+        <a href="https://apps.apple.com/us/app/last-war-survival/id6448786147" target="_blank" rel="noopener noreferrer" aria-label="Last War:Survival – zombie survival game">
+          <img src="https://mainrico.xyz/apps.png" alt="Last War:Survival app icon" width="80" height="80" loading="lazy">
+          <h3>Last War:Survival</h3>
+          <p>zombie survival game</p>
         </a>
       </li>
       <!-- 25 -->
-      <li class="mk-color-item apple-music">
-        <a href="https://apps.apple.com/us/app/apple-music/id1108187399" target="_blank" rel="noopener noreferrer" aria-label="Apple Music – Music. All in one place">
-          <img src="https://mainrico.xyz/apps.png" alt="Apple Music app icon" width="80" height="80" loading="lazy">
-          <h3>Apple Music</h3>
-          <p>Music. All in one place</p>
+      <li class="mk-color-item color1">
+        <a href="https://apps.apple.com/us/app/goods-puzzle-sort-challenge/id6482849843" target="_blank" rel="noopener noreferrer" aria-label="Goods Puzzle Sort Challenge – sorting challenge">
+          <img src="https://mainrico.xyz/apps.png" alt="Goods Puzzle Sort Challenge app icon" width="80" height="80" loading="lazy">
+          <h3>Goods Puzzle Sort Challenge</h3>
+          <p>sorting challenge</p>
         </a>
       </li>
       <!-- 26 -->
-      <li class="mk-color-item doordash">
-        <a href="https://apps.apple.com/us/app/doordash-food-delivery/id435454022" target="_blank" rel="noopener noreferrer" aria-label="DoorDash – Food delivery at your fingertips">
-          <img src="https://mainrico.xyz/apps.png" alt="DoorDash app icon" width="80" height="80" loading="lazy">
-          <h3>DoorDash</h3>
-          <p>Food delivery at your fingertips</p>
+      <li class="mk-color-item color2">
+        <a href="https://apps.apple.com/us/app/wool-craze-yarn-color-sort-3d/id6744317674" target="_blank" rel="noopener noreferrer" aria-label="Wool Craze: Yarn Color Sort 3D – yarn sorting game">
+          <img src="https://mainrico.xyz/apps.png" alt="Wool Craze: Yarn Color Sort 3D app icon" width="80" height="80" loading="lazy">
+          <h3>Wool Craze: Yarn Color Sort 3D</h3>
+          <p>yarn sorting game</p>
         </a>
       </li>
       <!-- 27 -->
-      <li class="mk-color-item outlook">
-        <a href="https://apps.apple.com/us/app/microsoft-outlook/id951937596" target="_blank" rel="noopener noreferrer" aria-label="Microsoft Outlook – Powerful email and calendar">
-          <img src="https://mainrico.xyz/apps.png" alt="Microsoft Outlook app icon" width="80" height="80" loading="lazy">
-          <h3>Microsoft Outlook</h3>
-          <p>Powerful email and calendar</p>
+      <li class="mk-color-item color3">
+        <a href="https://apps.apple.com/us/app/gossip-harbor-merge-story/id1623318294" target="_blank" rel="noopener noreferrer" aria-label="Gossip Harbor: Merge Story – merge story game">
+          <img src="https://mainrico.xyz/apps.png" alt="Gossip Harbor: Merge Story app icon" width="80" height="80" loading="lazy">
+          <h3>Gossip Harbor: Merge Story</h3>
+          <p>merge story game</p>
         </a>
       </li>
       <!-- 28 -->
-      <li class="mk-color-item word">
-        <a href="https://apps.apple.com/us/app/microsoft-word/id586447913" target="_blank" rel="noopener noreferrer" aria-label="Microsoft Word – Create and edit documents">
-          <img src="https://mainrico.xyz/apps.png" alt="Microsoft Word app icon" width="80" height="80" loading="lazy">
-          <h3>Microsoft Word</h3>
-          <p>Create and edit documents</p>
+      <li class="mk-color-item color4">
+        <a href="https://apps.apple.com/us/app/royal-match/id1482155847" target="_blank" rel="noopener noreferrer" aria-label="Royal Match – match-3 puzzle">
+          <img src="https://mainrico.xyz/apps.png" alt="Royal Match app icon" width="80" height="80" loading="lazy">
+          <h3>Royal Match</h3>
+          <p>match-3 puzzle</p>
         </a>
       </li>
       <!-- 29 -->
-      <li class="mk-color-item excel">
-        <a href="https://apps.apple.com/us/app/microsoft-excel/id586683407" target="_blank" rel="noopener noreferrer" aria-label="Microsoft Excel – Spreadsheets made simple">
-          <img src="https://mainrico.xyz/apps.png" alt="Microsoft Excel app icon" width="80" height="80" loading="lazy">
-          <h3>Microsoft Excel</h3>
-          <p>Spreadsheets made simple</p>
+      <li class="mk-color-item color5">
+        <a href="https://apps.apple.com/us/app/charades-family-party-game/id1453837845" target="_blank" rel="noopener noreferrer" aria-label="Charades! Family Party Game – family charades game">
+          <img src="https://mainrico.xyz/apps.png" alt="Charades! Family Party Game app icon" width="80" height="80" loading="lazy">
+          <h3>Charades! Family Party Game</h3>
+          <p>family charades game</p>
         </a>
       </li>
       <!-- 30 -->
-      <li class="mk-color-item powerpoint">
-        <a href="https://apps.apple.com/us/app/microsoft-powerpoint/id586450559" target="_blank" rel="noopener noreferrer" aria-label="Microsoft PowerPoint – Presentations that move">
-          <img src="https://mainrico.xyz/apps.png" alt="Microsoft PowerPoint app icon" width="80" height="80" loading="lazy">
-          <h3>Microsoft PowerPoint</h3>
-          <p>Presentations that move</p>
+      <li class="mk-color-item color6">
+        <a href="https://apps.apple.com/us/app/kingshot/id6739554056" target="_blank" rel="noopener noreferrer" aria-label="KingShot – shooting game">
+          <img src="https://mainrico.xyz/apps.png" alt="KingShot app icon" width="80" height="80" loading="lazy">
+          <h3>KingShot</h3>
+          <p>shooting game</p>
         </a>
       </li>
       <!-- 31 -->
-      <li class="mk-color-item onenote">
-        <a href="https://apps.apple.com/us/app/microsoft-onenote/id410395246" target="_blank" rel="noopener noreferrer" aria-label="Microsoft OneNote – Capture anything, anywhere">
-          <img src="https://mainrico.xyz/apps.png" alt="Microsoft OneNote app icon" width="80" height="80" loading="lazy">
-          <h3>Microsoft OneNote</h3>
-          <p>Capture anything, anywhere</p>
+      <li class="mk-color-item color1">
+        <a href="https://apps.apple.com/us/app/hole-io/id1389111413" target="_blank" rel="noopener noreferrer" aria-label="Hole.io – io battle game">
+          <img src="https://mainrico.xyz/apps.png" alt="Hole.io app icon" width="80" height="80" loading="lazy">
+          <h3>Hole.io</h3>
+          <p>io battle game</p>
         </a>
       </li>
       <!-- 32 -->
-      <li class="mk-color-item teams">
-        <a href="https://apps.apple.com/us/app/microsoft-teams/id1113153706" target="_blank" rel="noopener noreferrer" aria-label="Microsoft Teams – Keep work in one place">
-          <img src="https://mainrico.xyz/apps.png" alt="Microsoft Teams app icon" width="80" height="80" loading="lazy">
-          <h3>Microsoft Teams</h3>
-          <p>Keep work in one place</p>
+      <li class="mk-color-item color2">
+        <a href="https://apps.apple.com/us/app/differences-find-spot-it/id6504279468" target="_blank" rel="noopener noreferrer" aria-label="Differences - Find Spot It – spot the difference">
+          <img src="https://mainrico.xyz/apps.png" alt="Differences - Find Spot It app icon" width="80" height="80" loading="lazy">
+          <h3>Differences - Find Spot It</h3>
+          <p>spot the difference</p>
         </a>
       </li>
       <!-- 33 -->
-      <li class="mk-color-item onedrive">
-        <a href="https://apps.apple.com/us/app/microsoft-onedrive/id477537958" target="_blank" rel="noopener noreferrer" aria-label="Microsoft OneDrive – Securely store and share files">
-          <img src="https://mainrico.xyz/apps.png" alt="Microsoft OneDrive app icon" width="80" height="80" loading="lazy">
-          <h3>Microsoft OneDrive</h3>
-          <p>Securely store and share files</p>
+      <li class="mk-color-item color3">
+        <a href="https://apps.apple.com/us/app/sorry-world-board-game/id6749000283" target="_blank" rel="noopener noreferrer" aria-label="Sorry! World Board Game – classic board game">
+          <img src="https://mainrico.xyz/apps.png" alt="Sorry! World Board Game app icon" width="80" height="80" loading="lazy">
+          <h3>Sorry! World Board Game</h3>
+          <p>classic board game</p>
         </a>
       </li>
       <!-- 34 -->
-      <li class="mk-color-item edge">
-        <a href="https://apps.apple.com/us/app/microsoft-edge/id1288723197" target="_blank" rel="noopener noreferrer" aria-label="Microsoft Edge – The browser built for productivity">
-          <img src="https://mainrico.xyz/apps.png" alt="Microsoft Edge app icon" width="80" height="80" loading="lazy">
-          <h3>Microsoft Edge</h3>
-          <p>The browser built for productivity</p>
+      <li class="mk-color-item color4">
+        <a href="https://apps.apple.com/us/app/pixel-flow/id6751056652" target="_blank" rel="noopener noreferrer" aria-label="Pixel Flow – pixel art game">
+          <img src="https://mainrico.xyz/apps.png" alt="Pixel Flow app icon" width="80" height="80" loading="lazy">
+          <h3>Pixel Flow</h3>
+          <p>pixel art game</p>
         </a>
       </li>
       <!-- 35 -->
-      <li class="mk-color-item todo">
-        <a href="https://apps.apple.com/us/app/microsoft-to-do/id1212616790" target="_blank" rel="noopener noreferrer" aria-label="Microsoft To Do – Get organized and stay on top of life">
-          <img src="https://mainrico.xyz/apps.png" alt="Microsoft To Do app icon" width="80" height="80" loading="lazy">
-          <h3>Microsoft To Do</h3>
-          <p>Get organized and stay on top of life</p>
+      <li class="mk-color-item color5">
+        <a href="https://apps.apple.com/us/app/call-of-duty-mobile/id1287282214" target="_blank" rel="noopener noreferrer" aria-label="Call of Duty: Mobile – multiplayer shooter">
+          <img src="https://mainrico.xyz/apps.png" alt="Call of Duty: Mobile app icon" width="80" height="80" loading="lazy">
+          <h3>Call of Duty: Mobile</h3>
+          <p>multiplayer shooter</p>
         </a>
       </li>
       <!-- 36 -->
-      <li class="mk-color-item authenticator">
-        <a href="https://apps.apple.com/us/app/microsoft-authenticator/id983156458" target="_blank" rel="noopener noreferrer" aria-label="Microsoft Authenticator – Two-factor authentication">
-          <img src="https://mainrico.xyz/apps.png" alt="Microsoft Authenticator app icon" width="80" height="80" loading="lazy">
-          <h3>Microsoft Authenticator</h3>
-          <p>Two-factor authentication</p>
+      <li class="mk-color-item color6">
+        <a href="https://apps.apple.com/us/app/angry-birds-2/id880047117" target="_blank" rel="noopener noreferrer" aria-label="Angry Birds 2 – physics puzzle adventure">
+          <img src="https://mainrico.xyz/apps.png" alt="Angry Birds 2 app icon" width="80" height="80" loading="lazy">
+          <h3>Angry Birds 2</h3>
+          <p>physics puzzle adventure</p>
         </a>
       </li>
     </ul>
