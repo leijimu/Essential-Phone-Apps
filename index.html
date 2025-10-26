@@ -25,6 +25,7 @@
     img{max-width:100%;height:auto;display:block}
     a{color:inherit;text-decoration:none}
 
+    /* hero – 仅包裹标题 */
     .hero{
       text-align:center;
       padding:3rem 1rem 2rem;
@@ -34,7 +35,8 @@
     .hero h1{font-size:clamp(1.8rem,5vw,2.5rem);margin-bottom:.5rem}
     .hero p{font-size:clamp(.95rem,2.5vw,1.1rem);opacity:.9}
 
-    .app-grid{
+    /* 栅格 */
+    .mk-item-box{
       list-style:none;
       display:grid;
       gap:1.5rem;
@@ -42,7 +44,7 @@
       padding:2.5rem 1rem 4rem;
       max-width:1100px;margin:auto;
     }
-    .app-card{
+    .mk-color-item{
       position:relative;
       background:var(--bg, var(--c1));
       border-radius:8px;
@@ -51,16 +53,18 @@
       color:#fff;
       transition:transform .3s ease,box-shadow .3s ease;
     }
-    .app-card:hover{transform:translateY(-6px);box-shadow:0 26px 40px -24px rgba(0,36,100,.5)}
-    .app-card:nth-child(6n+2){--bg:var(--c2)}
-    .app-card:nth-child(6n+3){--bg:var(--c3)}
-    .app-card:nth-child(6n+4){--bg:var(--c4)}
-    .app-card:nth-child(6n+5){--bg:var(--c5)}
-    .app-card:nth-child(6n+6){--bg:var(--c6)}
-    .app-card img{height:60px;margin:0 auto .75rem;border-radius:12px}
-    .app-card h2{font-size:1.25rem;margin-bottom:.25rem;color:var(--text-dark)}
-    .app-card p{font-size:.875rem;opacity:.9}
+    .mk-color-item:hover{transform:translateY(-6px);box-shadow:0 26px 40px -24px rgba(0,36,100,.5)}
+    .mk-color-item.color1{--bg:var(--c1)}
+    .mk-color-item.color2{--bg:var(--c2)}
+    .mk-color-item.color3{--bg:var(--c3)}
+    .mk-color-item.color4{--bg:var(--c4)}
+    .mk-color-item.color5{--bg:var(--c5)}
+    .mk-color-item.color6{--bg:var(--c6)}
+    .mk-color-item img{height:60px;margin:0 auto .75rem;border-radius:12px}
+    .mk-color-item h3{font-size:1.25rem;margin-bottom:.25rem;color:var(--text-dark)}
+    .mk-color-item p{font-size:.875rem;opacity:.9}
 
+    /* 返回顶部 */
     #topBtn{
       position:fixed;bottom:1.5rem;right:-60px;width:40px;height:40px;
       background:rgba(0,0,0,.6);color:#fff;border-radius:50%;cursor:pointer;
@@ -77,257 +81,257 @@
   </header>
 
   <main>
-    <ul class="app-grid">
+    <ul class="mk-item-box">
       <!-- 1 -->
-      <li class="app-card">
+      <li class="mk-color-item color1">
         <a href="https://apps.apple.com/us/app/tiktok/id835599320" target="_blank" rel="noopener noreferrer" aria-label="TikTok: global short-video community">
-          <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/91/15/84/91158496-4a7f-7f4c-77d3-39e6c3b5b00e/AppIcon-0-1x_U007emarketing-0-7-0-85-220.png/340x340bb.webp" alt="TikTok">
-          <h2>TikTok</h2><p>global short-video community</p>
+          <img src="https://jiejingku.net/icon/835599320/340x340bb.webp" alt="TikTok">
+          <h3>TikTok</h3><p>global short-video community</p>
         </a>
       </li>
       <!-- 2 -->
-      <li class="app-card">
+      <li class="mk-color-item color2">
         <a href="https://apps.apple.com/us/app/instagram/id389801252" target="_blank" rel="noopener noreferrer" aria-label="Instagram: photo & video sharing">
-          <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/87/4c/28/874c28e9-0d5e-8d98-40f3-1a9c52c7c3b6/AppIcon-0-1x_U007emarketing-0-7-0-85-220.png/340x340bb.webp" alt="Instagram">
-          <h2>Instagram</h2><p>photo & video sharing</p>
+          <img src="https://jiejingku.net/icon/389801252/340x340bb.webp" alt="Instagram">
+          <h3>Instagram</h3><p>photo & video sharing</p>
         </a>
       </li>
       <!-- 3 -->
-      <li class="app-card">
+      <li class="mk-color-item color3">
         <a href="https://apps.apple.com/us/app/whatsapp-messenger/id310633997" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp: simple. reliable. private.">
-          <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/3b/1c/7f/3b1c7f7f-1a29-4c94-8f4d-1a0c92b6e0e8/AppIcon-0-1x_U007emarketing-0-7-0-85-220.png/340x340bb.webp" alt="WhatsApp">
-          <h2>WhatsApp</h2><p>simple. reliable. private.</p>
+          <img src="https://jiejingku.net/icon/310633997/340x340bb.webp" alt="WhatsApp">
+          <h3>WhatsApp</h3><p>simple. reliable. private.</p>
         </a>
       </li>
       <!-- 4 -->
-      <li class="app-card">
+      <li class="mk-color-item color4">
         <a href="https://apps.apple.com/us/app/capcut-video-editor/id1500855883" target="_blank" rel="noopener noreferrer" aria-label="CapCut: video editor">
-          <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/58/7c/7f/587c7f7f-1a29-4c94-8f4d-1a0c92b6e0e8/AppIcon-0-1x_U007emarketing-0-7-0-85-220.png/340x340bb.webp" alt="CapCut">
-          <h2>CapCut</h2><p>video editor</p>
+          <img src="https://jiejingku.net/icon/1500855883/340x340bb.webp" alt="CapCut">
+          <h3>CapCut</h3><p>video editor</p>
         </a>
       </li>
       <!-- 5 -->
-      <li class="app-card">
+      <li class="mk-color-item color5">
         <a href="https://apps.apple.com/us/app/facebook/id284882215" target="_blank" rel="noopener noreferrer" aria-label="Facebook: connect with friends">
-          <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/87/4c/28/874c28e9-0d5e-8d98-40f3-1a9c52c7c3b6/AppIcon-0-1x_U007emarketing-0-7-0-85-220.png/340x340bb.webp" alt="Facebook">
-          <h2>Facebook</h2><p>connect with friends</p>
+          <img src="https://jiejingku.net/icon/284882215/340x340bb.webp" alt="Facebook">
+          <h3>Facebook</h3><p>connect with friends</p>
         </a>
       </li>
       <!-- 6 -->
-      <li class="app-card">
+      <li class="mk-color-item color6">
         <a href="https://apps.apple.com/us/app/messenger/id454638411" target="_blank" rel="noopener noreferrer" aria-label="Messenger: text & video chat">
-          <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/87/4c/28/874c28e9-0d5e-8d98-40f3-1a9c52c7c3b6/AppIcon-0-1x_U007emarketing-0-7-0-85-220.png/340x340bb.webp" alt="Messenger">
-          <h2>Messenger</h2><p>text & video chat</p>
+          <img src="https://jiejingku.net/icon/454638411/340x340bb.webp" alt="Messenger">
+          <h3>Messenger</h3><p>text & video chat</p>
         </a>
       </li>
       <!-- 7 -->
-      <li class="app-card">
+      <li class="mk-color-item color1">
         <a href="https://apps.apple.com/us/app/snapchat/id447188370" target="_blank" rel="noopener noreferrer" aria-label="Snapchat: share the moment">
-          <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/87/4c/28/874c28e9-0d5e-8d98-40f3-1a9c52c7c3b6/AppIcon-0-1x_U007emarketing-0-7-0-85-220.png/340x340bb.webp" alt="Snapchat">
-          <h2>Snapchat</h2><p>share the moment</p>
+          <img src="https://jiejingku.net/icon/447188370/340x340bb.webp" alt="Snapchat">
+          <h3>Snapchat</h3><p>share the moment</p>
         </a>
       </li>
       <!-- 8 -->
-      <li class="app-card">
+      <li class="mk-color-item color2">
         <a href="https://apps.apple.com/us/app/youtube/id544007664" target="_blank" rel="noopener noreferrer" aria-label="YouTube: watch, listen, stream">
-          <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/87/4c/28/874c28e9-0d5e-8d98-40f3-1a9c52c7c3b6/AppIcon-0-1x_U007emarketing-0-7-0-85-220.png/340x340bb.webp" alt="YouTube">
-          <h2>YouTube</h2><p>watch, listen, stream</p>
+          <img src="https://jiejingku.net/icon/544007664/340x340bb.webp" alt="YouTube">
+          <h3>YouTube</h3><p>watch, listen, stream</p>
         </a>
       </li>
       <!-- 9 -->
-      <li class="app-card">
+      <li class="mk-color-item color3">
         <a href="https://apps.apple.com/us/app/spotify-music/id324684580" target="_blank" rel="noopener noreferrer" aria-label="Spotify: music and podcasts">
-          <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/87/4c/28/874c28e9-0d5e-8d98-40f3-1a9c52c7c3b6/AppIcon-0-1x_U007emarketing-0-7-0-85-220.png/340x340bb.webp" alt="Spotify">
-          <h2>Spotify</h2><p>music and podcasts</p>
+          <img src="https://jiejingku.net/icon/324684580/340x340bb.webp" alt="Spotify">
+          <h3>Spotify</h3><p>music and podcasts</p>
         </a>
       </li>
       <!-- 10 -->
-      <li class="app-card">
+      <li class="mk-color-item color4">
         <a href="https://apps.apple.com/us/app/netflix/id363590051" target="_blank" rel="noopener noreferrer" aria-label="Netflix: stream TV shows & movies">
-          <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/87/4c/28/874c28e9-0d5e-8d98-40f3-1a9c52c7c3b6/AppIcon-0-1x_U007emarketing-0-7-0-85-220.png/340x340bb.webp" alt="Netflix">
-          <h2>Netflix</h2><p>stream TV shows & movies</p>
+          <img src="https://jiejingku.net/icon/363590051/340x340bb.webp" alt="Netflix">
+          <h3>Netflix</h3><p>stream TV shows & movies</p>
         </a>
       </li>
       <!-- 11 -->
-      <li class="app-card">
+      <li class="mk-color-item color5">
         <a href="https://apps.apple.com/us/app/gmail/id422689480" target="_blank" rel="noopener noreferrer" aria-label="Gmail: email by Google">
-          <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/87/4c/28/874c28e9-0d5e-8d98-40f3-1a9c52c7c3b6/AppIcon-0-1x_U007emarketing-0-7-0-85-220.png/340x340bb.webp" alt="Gmail">
-          <h2>Gmail</h2><p>email by Google</p>
+          <img src="https://jiejingku.net/icon/422689480/340x340bb.webp" alt="Gmail">
+          <h3>Gmail</h3><p>email by Google</p>
         </a>
       </li>
       <!-- 12 -->
-      <li class="app-card">
+      <li class="mk-color-item color6">
         <a href="https://apps.apple.com/us/app/microsoft-teams/id1113153706" target="_blank" rel="noopener noreferrer" aria-label="Microsoft Teams: collaborate">
-          <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/87/4c/28/874c28e9-0d5e-8d98-40f3-1a9c52c7c3b6/AppIcon-0-1x_U007emarketing-0-7-0-85-220.png/340x340bb.webp" alt="Microsoft Teams">
-          <h2>Microsoft Teams</h2><p>collaborate</p>
+          <img src="https://jiejingku.net/icon/1113153706/340x340bb.webp" alt="Microsoft Teams">
+          <h3>Microsoft Teams</h3><p>collaborate</p>
         </a>
       </li>
       <!-- 13 -->
-      <li class="app-card">
+      <li class="mk-color-item color1">
         <a href="https://apps.apple.com/us/app/zoom-cloud-meetings/id546505307" target="_blank" rel="noopener noreferrer" aria-label="Zoom: video conferencing">
-          <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/87/4c/28/874c28e9-0d5e-8d98-40f3-1a9c52c7c3b6/AppIcon-0-1x_U007emarketing-0-7-0-85-220.png/340x340bb.webp" alt="Zoom">
-          <h2>Zoom</h2><p>video conferencing</p>
+          <img src="https://jiejingku.net/icon/546505307/340x340bb.webp" alt="Zoom">
+          <h3>Zoom</h3><p>video conferencing</p>
         </a>
       </li>
       <!-- 14 -->
-      <li class="app-card">
+      <li class="mk-color-item color2">
         <a href="https://apps.apple.com/us/app/slack/id618783545" target="_blank" rel="noopener noreferrer" aria-label="Slack: team communication">
-          <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/87/4c/28/874c28e9-0d5e-8d98-40f3-1a9c52c7c3b6/AppIcon-0-1x_U007emarketing-0-7-0-85-220.png/340x340bb.webp" alt="Slack">
-          <h2>Slack</h2><p>team communication</p>
+          <img src="https://jiejingku.net/icon/618783545/340x340bb.webp" alt="Slack">
+          <h3>Slack</h3><p>team communication</p>
         </a>
       </li>
       <!-- 15 -->
-      <li class="app-card">
+      <li class="mk-color-item color3">
         <a href="https://apps.apple.com/us/app/google-maps/id585027354" target="_blank" rel="noopener noreferrer" aria-label="Google Maps: navigation & traffic">
-          <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/87/4c/28/874c28e9-0d5e-8d98-40f3-1a9c52c7c3b6/AppIcon-0-1x_U007emarketing-0-7-0-85-220.png/340x340bb.webp" alt="Google Maps">
-          <h2>Google Maps</h2><p>navigation & traffic</p>
+          <img src="https://jiejingku.net/icon/585027354/340x340bb.webp" alt="Google Maps">
+          <h3>Google Maps</h3><p>navigation & traffic</p>
         </a>
       </li>
       <!-- 16 -->
-      <li class="app-card">
+      <li class="mk-color-item color4">
         <a href="https://apps.apple.com/us/app/uber/id368677368" target="_blank" rel="noopener noreferrer" aria-label="Uber: request a ride">
-          <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/87/4c/28/874c28e9-0d5e-8d98-40f3-1a9c52c7c3b6/AppIcon-0-1x_U007emarketing-0-7-0-85-220.png/340x340bb.webp" alt="Uber">
-          <h2>Uber</h2><p>request a ride</p>
+          <img src="https://jiejingku.net/icon/368677368/340x340bb.webp" alt="Uber">
+          <h3>Uber</h3><p>request a ride</p>
         </a>
       </li>
       <!-- 17 -->
-      <li class="app-card">
+      <li class="mk-color-item color5">
         <a href="https://apps.apple.com/us/app/door-dash-food-delivery/id719972451" target="_blank" rel="noopener noreferrer" aria-label="DoorDash: food delivery">
-          <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/87/4c/28/874c28e9-0d5e-8d98-40f3-1a9c52c7c3b6/AppIcon-0-1x_U007emarketing-0-7-0-85-220.png/340x340bb.webp" alt="DoorDash">
-          <h2>DoorDash</h2><p>food delivery</p>
+          <img src="https://jiejingku.net/icon/719972451/340x340bb.webp" alt="DoorDash">
+          <h3>DoorDash</h3><p>food delivery</p>
         </a>
       </li>
       <!-- 18 -->
-      <li class="app-card">
+      <li class="mk-color-item color6">
         <a href="https://apps.apple.com/us/app/venmo/id351727428" target="_blank" rel="noopener noreferrer" aria-label="Venmo: send & receive money">
-          <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/87/4c/28/874c28e9-0d5e-8d98-40f3-1a9c52c7c3b6/AppIcon-0-1x_U007emarketing-0-7-0-85-220.png/340x340bb.webp" alt="Venmo">
-          <h2>Venmo</h2><p>send & receive money</p>
+          <img src="https://jiejingku.net/icon/351727428/340x340bb.webp" alt="Venmo">
+          <h3>Venmo</h3><p>send & receive money</p>
         </a>
       </li>
       <!-- 19 -->
-      <li class="app-card">
+      <li class="mk-color-item color1">
         <a href="https://apps.apple.com/us/app/cash-app/id711923939" target="_blank" rel="noopener noreferrer" aria-label="Cash App: payments & banking">
-          <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/87/4c/28/874c28e9-0d5e-8d98-40f3-1a9c52c7c3b6/AppIcon-0-1x_U007emarketing-0-7-0-85-220.png/340x340bb.webp" alt="Cash App">
-          <h2>Cash App</h2><p>payments & banking</p>
+          <img src="https://jiejingku.net/icon/711923939/340x340bb.webp" alt="Cash App">
+          <h3>Cash App</h3><p>payments & banking</p>
         </a>
       </li>
       <!-- 20 -->
-      <li class="app-card">
+      <li class="mk-color-item color2">
         <a href="https://apps.apple.com/us/app/robinhood-investing/id938003185" target="_blank" rel="noopener noreferrer" aria-label="Robinhood: invest in stocks">
-          <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/87/4c/28/874c28e9-0d5e-8d98-40f3-1a9c52c7c3b6/AppIcon-0-1x_U007emarketing-0-7-0-85-220.png/340x340bb.webp" alt="Robinhood">
-          <h2>Robinhood</h2><p>invest in stocks</p>
+          <img src="https://jiejingku.net/icon/938003185/340x340bb.webp" alt="Robinhood">
+          <h3>Robinhood</h3><p>invest in stocks</p>
         </a>
       </li>
       <!-- 21 -->
-      <li class="app-card">
+      <li class="mk-color-item color3">
         <a href="https://apps.apple.com/us/app/coinbase-buy-bitcoin/id886427730" target="_blank" rel="noopener noreferrer" aria-label="Coinbase: buy & sell crypto">
-          <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/87/4c/28/874c28e9-0d5e-8d98-40f3-1a9c52c7c3b6/AppIcon-0-1x_U007emarketing-0-7-0-85-220.png/340x340bb.webp" alt="Coinbase">
-          <h2>Coinbase</h2><p>buy & sell crypto</p>
+          <img src="https://jiejingku.net/icon/886427730/340x340bb.webp" alt="Coinbase">
+          <h3>Coinbase</h3><p>buy & sell crypto</p>
         </a>
       </li>
       <!-- 22 -->
-      <li class="app-card">
+      <li class="mk-color-item color4">
         <a href="https://apps.apple.com/us/app/amazon-shopping/id297606951" target="_blank" rel="noopener noreferrer" aria-label="Amazon: shopping & deals">
-          <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/87/4c/28/874c28e9-0d5e-8d98-40f3-1a9c52c7c3b6/AppIcon-0-1x_U007emarketing-0-7-0-85-220.png/340x340bb.webp" alt="Amazon">
-          <h2>Amazon</h2><p>shopping & deals</p>
+          <img src="https://jiejingku.net/icon/297606951/340x340bb.webp" alt="Amazon">
+          <h3>Amazon</h3><p>shopping & deals</p>
         </a>
       </li>
       <!-- 23 -->
-      <li class="app-card">
+      <li class="mk-color-item color5">
         <a href="https://apps.apple.com/us/app/shop-shop-shopping/id972577479" target="_blank" rel="noopener noreferrer" aria-label="Shop: track all packages">
-          <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/87/4c/28/874c28e9-0d5e-8d98-40f3-1a9c52c7c3b6/AppIcon-0-1x_U007emarketing-0-7-0-85-220.png/340x340bb.webp" alt="Shop">
-          <h2>Shop</h2><p>track all packages</p>
+          <img src="https://jiejingku.net/icon/972577479/340x340bb.webp" alt="Shop">
+          <h3>Shop</h3><p>track all packages</p>
         </a>
       </li>
       <!-- 24 -->
-      <li class="app-card">
+      <li class="mk-color-item color6">
         <a href="https://apps.apple.com/us/app/shein-shopping-fashion/id878577184" target="_blank" rel="noopener noreferrer" aria-label="SHEIN: fashion shopping">
-          <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/87/4c/28/874c28e9-0d5e-8d98-40f3-1a9c52c7c3b6/AppIcon-0-1x_U007emarketing-0-7-0-85-220.png/340x340bb.webp" alt="SHEIN">
-          <h2>SHEIN</h2><p>fashion shopping</p>
+          <img src="https://jiejingku.net/icon/878577184/340x340bb.webp" alt="SHEIN">
+          <h3>SHEIN</h3><p>fashion shopping</p>
         </a>
       </li>
       <!-- 25 -->
-      <li class="app-card">
+      <li class="mk-color-item color1">
         <a href="https://apps.apple.com/us/app/duolingo-language-lessons/id570060128" target="_blank" rel="noopener noreferrer" aria-label="Duolingo: learn languages free">
-          <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/87/4c/28/874c28e9-0d5e-8d98-40f3-1a9c52c7c3b6/AppIcon-0-1x_U007emarketing-0-7-0-85-220.png/340x340bb.webp" alt="Duolingo">
-          <h2>Duolingo</h2><p>learn languages free</p>
+          <img src="https://jiejingku.net/icon/570060128/340x340bb.webp" alt="Duolingo">
+          <h3>Duolingo</h3><p>learn languages free</p>
         </a>
       </li>
       <!-- 26 -->
-      <li class="app-card">
+      <li class="mk-color-item color2">
         <a href="https://apps.apple.com/us/app/chatgpt/id6448311069" target="_blank" rel="noopener noreferrer" aria-label="ChatGPT: AI chat assistant">
-          <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/87/4c/28/874c28e9-0d5e-8d98-40f3-1a9c52c7c3b6/AppIcon-0-1x_U007emarketing-0-7-0-85-220.png/340x340bb.webp" alt="ChatGPT">
-          <h2>ChatGPT</h2><p>AI chat assistant</p>
+          <img src="https://jiejingku.net/icon/6448311069/340x340bb.webp" alt="ChatGPT">
+          <h3>ChatGPT</h3><p>AI chat assistant</p>
         </a>
       </li>
       <!-- 27 -->
-      <li class="app-card">
+      <li class="mk-color-item color3">
         <a href="https://apps.apple.com/us/app/canva-ai-powered-design/id897446215" target="_blank" rel="noopener noreferrer" aria-label="Canva: AI-powered design">
-          <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/87/4c/28/874c28e9-0d5e-8d98-40f3-1a9c52c7c3b6/AppIcon-0-1x_U007emarketing-0-7-0-85-220.png/340x340bb.webp" alt="Canva">
-          <h2>Canva</h2><p>AI-powered design</p>
+          <img src="https://jiejingku.net/icon/897446215/340x340bb.webp" alt="Canva">
+          <h3>Canva</h3><p>AI-powered design</p>
         </a>
       </li>
       <!-- 28 -->
-      <li class="app-card">
+      <li class="mk-color-item color4">
         <a href="https://apps.apple.com/us/app/adobe-photoshop/id331975235" target="_blank" rel="noopener noreferrer" aria-label="Adobe Photoshop: AI tools">
-          <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/87/4c/28/874c28e9-0d5e-8d98-40f3-1a9c52c7c3b6/AppIcon-0-1x_U007emarketing-0-7-0-85-220.png/340x340bb.webp" alt="Photoshop">
-          <h2>Photoshop</h2><p>AI tools</p>
+          <img src="https://jiejingku.net/icon/331975235/340x340bb.webp" alt="Photoshop">
+          <h3>Photoshop</h3><p>AI tools</p>
         </a>
       </li>
       <!-- 29 -->
-      <li class="app-card">
+      <li class="mk-color-item color5">
         <a href="https://apps.apple.com/us/app/goodnotes-6/id1444383602" target="_blank" rel="noopener noreferrer" aria-label="GoodNotes 6: digital notes">
-          <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/87/4c/28/874c28e9-0d5e-8d98-40f3-1a9c52c7c3b6/AppIcon-0-1x_U007emarketing-0-7-0-85-220.png/340x340bb.webp" alt="GoodNotes">
-          <h2>GoodNotes 6</h2><p>digital notes</p>
+          <img src="https://jiejingku.net/icon/1444383602/340x340bb.webp" alt="GoodNotes">
+          <h3>GoodNotes 6</h3><p>digital notes</p>
         </a>
       </li>
       <!-- 30 -->
-      <li class="app-card">
+      <li class="mk-color-item color6">
         <a href="https://apps.apple.com/us/app/notability/id360593530" target="_blank" rel="noopener noreferrer" aria-label="Notability: sketch & note">
-          <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/87/4c/28/874c28e9-0d5e-8d98-40f3-1a9c52c7c3b6/AppIcon-0-1x_U007emarketing-0-7-0-85-220.png/340x340bb.webp" alt="Notability">
-          <h2>Notability</h2><p>sketch & note</p>
+          <img src="https://jiejingku.net/icon/360593530/340x340bb.webp" alt="Notability">
+          <h3>Notability</h3><p>sketch & note</p>
         </a>
       </li>
       <!-- 31 -->
-      <li class="app-card">
+      <li class="mk-color-item color1">
         <a href="https://apps.apple.com/us/app/1password-8/id1511601750" target="_blank" rel="noopener noreferrer" aria-label="1Password: password manager">
-          <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/87/4c/28/874c28e9-0d5e-8d98-40f3-1a9c52c7c3b6/AppIcon-0-1x_U007emarketing-0-7-0-85-220.png/340x340bb.webp" alt="1Password">
-          <h2>1Password</h2><p>password manager</p>
+          <img src="https://jiejingku.net/icon/1511601750/340x340bb.webp" alt="1Password">
+          <h3>1Password</h3><p>password manager</p>
         </a>
       </li>
       <!-- 32 -->
-      <li class="app-card">
+      <li class="mk-color-item color2">
         <a href="https://apps.apple.com/us/app/bitwarden/id1137397744" target="_blank" rel="noopener noreferrer" aria-label="Bitwarden: free password manager">
-          <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/87/4c/28/874c28e9-0d5e-8d98-40f3-1a9c52c7c3b6/AppIcon-0-1x_U007emarketing-0-7-0-85-220.png/340x340bb.webp" alt="Bitwarden">
-          <h2>Bitwarden</h2><p>free password manager</p>
+          <img src="https://jiejingku.net/icon/1137397744/340x340bb.webp" alt="Bitwarden">
+          <h3>Bitwarden</h3><p>free password manager</p>
         </a>
       </li>
       <!-- 33 -->
-      <li class="app-card">
+      <li class="mk-color-item color3">
         <a href="https://apps.apple.com/us/app/headspace-meditation/id493145008" target="_blank" rel="noopener noreferrer" aria-label="Headspace: meditation & sleep">
-          <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/87/4c/28/874c28e9-0d5e-8d98-40f3-1a9c52c7c3b6/AppIcon-0-1x_U007emarketing-0-7-0-85-220.png/340x340bb.webp" alt="Headspace">
-          <h2>Headspace</h2><p>meditation & sleep</p>
+          <img src="https://jiejingku.net/icon/493145008/340x340bb.webp" alt="Headspace">
+          <h3>Headspace</h3><p>meditation & sleep</p>
         </a>
       </li>
       <!-- 34 -->
-      <li class="app-card">
+      <li class="mk-color-item color4">
         <a href="https://apps.apple.com/us/app/calm-meditation/id571800810" target="_blank" rel="noopener noreferrer" aria-label="Calm: sleep & meditate">
-          <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/87/4c/28/874c28e9-0d5e-8d98-40f3-1a9c52c7c3b6/AppIcon-0-1x_U007emarketing-0-7-0-85-220.png/340x340bb.webp" alt="Calm">
-          <h2>Calm</h2><p>sleep & meditate</p>
+          <img src="https://jiejingku.net/icon/571800810/340x340bb.webp" alt="Calm">
+          <h3>Calm</h3><p>sleep & meditate</p>
         </a>
       </li>
       <!-- 35 -->
-      <li class="app-card">
+      <li class="mk-color-item color5">
         <a href="https://apps.apple.com/us/app/myfitnesspal/id341232718" target="_blank" rel="noopener noreferrer" aria-label="MyFitnessPal: calorie counter">
-          <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/87/4c/28/874c28e9-0d5e-8d98-40f3-1a9c52c7c3b6/AppIcon-0-1x_U007emarketing-0-7-0-85-220.png/340x340bb.webp" alt="MyFitnessPal">
-          <h2>MyFitnessPal</h2><p>calorie counter</p>
+          <img src="https://jiejingku.net/icon/341232718/340x340bb.webp" alt="MyFitnessPal">
+          <h3>MyFitnessPal</h3><p>calorie counter</p>
         </a>
       </li>
       <!-- 36 -->
-      <li class="app-card">
+      <li class="mk-color-item color6">
         <a href="https://apps.apple.com/us/app/strava-run-and-ride/id426826309" target="_blank" rel="noopener noreferrer" aria-label="Strava: run, ride, swim">
-          <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/87/4c/28/874c28e9-0d5e-8d98-40f3-1a9c52c7c3b6/AppIcon-0-1x_U007emarketing-0-7-0-85-220.png/340x340bb.webp" alt="Strava">
-          <h2>Strava</h2><p>run, ride, swim</p>
+          <img src="https://jiejingku.net/icon/426826309/340x340bb.webp" alt="Strava">
+          <h3>Strava</h3><p>run, ride, swim</p>
         </a>
       </li>
     </ul>
